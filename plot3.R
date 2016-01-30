@@ -8,5 +8,5 @@ ytem <- aggregate(cbind(Emissions) ~year+type, data=balt, sum)
 # create png
 png(file="plot3.png",width=480,height=480)
 g<- ggplot(ytem, aes(year,Emissions, color=type))+geom_point()+geom_line()
-# print(g)
+print(g)
 dev.off() 
